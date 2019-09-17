@@ -29,7 +29,7 @@ public class Main {
 		doc.setAuthor("Disney");
 		dwarfs.add(doc);
 		
-		///////////////////////////////////////////
+		//////////////////////////// 
 		
 		Dwarf thorin = new Dwarf();
 		thorin.setName("Thorin");
@@ -71,7 +71,6 @@ public class Main {
 			}
 		}
 		
-
 	}
 
 }
