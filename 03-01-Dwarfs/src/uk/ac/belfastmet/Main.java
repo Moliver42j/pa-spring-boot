@@ -1,7 +1,6 @@
 package uk.ac.belfastmet;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 public class Main 
 {
@@ -49,7 +48,7 @@ public class Main
 		}
 		
 		
-		ArrayList<Dwarf> dwarfs = new ArrayList<Dwarf>();
+		//ArrayList<Dwarf> dwarfs = new ArrayList<Dwarf>();
 	}
 
 }
