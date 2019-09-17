@@ -11,13 +11,13 @@ public class Main
 		System.out.println("What's happnin");
 		
 		ArrayList<String> dwarfs = new ArrayList<String>();
-			dwarfs.add("Happy");
-			dwarfs.add("Sleepy");
-			dwarfs.add("Dopey");
-			dwarfs.add("Bashful");
-			dwarfs.add("Sneezy");
-			dwarfs.add("Grumpy");
-			dwarfs.add("Doc");
+			dwarfs.add("Happy"   );
+			dwarfs.add("Sleepy"  );
+			dwarfs.add("Dopey"   );
+			dwarfs.add("Bashful" );
+			dwarfs.add("Sneezy"  );
+			dwarfs.add("Grumpy"  );
+			dwarfs.add("Doc"     );
 		
 		System.out.println("The Seven Dwarfs are: ");
 		
@@ -27,19 +27,19 @@ public class Main
 		}
 		
 		ArrayList<String> dwarves = new ArrayList<String>();
-			dwarves.add("Thorin");
-			dwarves.add("Balin");
-			dwarves.add("Dwalin");
-			dwarves.add("Fili");
-			dwarves.add("Kili");
-			dwarves.add("Dori");
-			dwarves.add("Nori");
-			dwarves.add("Oin");
-			dwarves.add("Ori");
-			dwarves.add("Gloin");
-			dwarves.add("Bifur");
-			dwarves.add("Bofur");
-			dwarves.add("Bombur");
+			dwarves.add("Thorin" );
+			dwarves.add("Balin"  );
+			dwarves.add("Dwalin" );
+			dwarves.add("Fili"   );
+			dwarves.add("Kili"   );
+			dwarves.add("Dori"   );
+			dwarves.add("Nori"   );
+			dwarves.add("Oin"    );
+			dwarves.add("Ori"    );
+			dwarves.add("Gloin"  );
+			dwarves.add("Bifur"  );
+			dwarves.add("Bofur"  );
+			dwarves.add("Bombur" );
 		
 		System.out.println("\nThe Dwarves in the company of Thorin are: ");
 		
@@ -47,6 +47,9 @@ public class Main
 		{
 			System.out.println(dwarf);
 		}
+		
+		
+		ArrayList<Dwarf> dwarfs = new ArrayList<Dwarf>();
 	}
 
 }
