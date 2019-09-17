@@ -5,9 +5,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping
+@RequestMapping("/shrekmovie")
 public class ShrekController 
 {
+	
+	@GetMapping("/")
+	public String home()
+	{
+		return "Characters in the movie Shrek";
+	}
 	
 	@GetMapping("/shrek")
 	public String shrek()
