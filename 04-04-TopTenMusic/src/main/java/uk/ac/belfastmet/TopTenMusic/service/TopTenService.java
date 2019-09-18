@@ -27,6 +27,6 @@ public class TopTenService {
 	{
 		this.topArtists = new ArrayList<TopTen>();
 		
-		this.topArtists.add(new TopTen("Post Malone", "Beerbongs and Bentleys", "PostMalone.png"))
+		this.topArtists.add(new TopTen("Post Malone", "Beerbongs and Bentleys", "PostMalone.png"));
 	}
 }
