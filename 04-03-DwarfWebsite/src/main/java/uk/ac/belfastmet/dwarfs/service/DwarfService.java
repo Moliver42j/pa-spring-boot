@@ -12,7 +12,8 @@ public class DwarfService
 	private ArrayList<Dwarf> disneyDwarfs;
 	private ArrayList<Dwarf> tolkienDwarfs;
 
-	private ArrayList<Dwarf> getDisneyDwarfs() {
+	public ArrayList<Dwarf> getDisneyDwarfs() 
+	{
 		this.disneyDwarfs = new ArrayList<Dwarf>();
 
 		this.disneyDwarfs.add(new Dwarf("Sleepy",  "Disney", "Sleepy.png"));
