@@ -44,15 +44,20 @@
 <table class="table table-striped">
 	<thead>
 		<tr>
+		<th>position</th>
 		<th>name</th>
-		<th>picture</th>
+		<th>song</th>
+		<th>genre</th>
+		<th>image</th>
 		</tr>
 	</thead>
 	
 	<tbody>
 		<tr th:each="song: ${topSongs}">
+			<td th:text="${song.position}"></td>
 			<td th:text="${song.artistName}"></td>
 			<td th:text="${song.song}"></td>
+			<td th:text="${song.genre}"></td>
 			<td><img src="../static/images/postmalone.png" th:src="@{/images/} + ${song.image}"></img> </td>
 		</tr>
 	</tbody>

@@ -19,6 +19,8 @@ public class TopTenController
 	@GetMapping("/index")
 	public String homePage(Model model)
 	{
+		log.info("index method");
+		
 		return "index";
 	}
 	
