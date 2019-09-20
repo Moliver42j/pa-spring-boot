@@ -19,16 +19,16 @@ public class TopTenService {
 		
 		this.topSongs = new ArrayList<TopTen>();
 		
-		this.topSongs.add(new TopTen("Post Malone",		 "Hollywood's Bleeding", 					 "postmalone.png"	  ));
-		this.topSongs.add(new TopTen("Taylor Swift",	 "Lover",				 					 "taylorswift.png"	  ));
-		this.topSongs.add(new TopTen("Melanie Martinez", "k-12",				 					 "melaniemartinez.png"));
-		this.topSongs.add(new TopTen("Young Thug",		 "So Much Fun",			 					 "youngthug.png"	  ));
-		this.topSongs.add(new TopTen("Lil Tecca",		 "We love you Tecca",	 					 "liltecca.png"		  ));
-		this.topSongs.add(new TopTen("Lizzo",			 "Cuz I love you",		 					 "lizzo.png"		  ));
-		this.topSongs.add(new TopTen("Tool",			 "Fear Inoculum",		 					 "tool.png"			  ));
-		this.topSongs.add(new TopTen("Billie Eilish",	 "When We All Fall Asleep, Where do we Go?", "billieeilish.png"	  ));
-		this.topSongs.add(new TopTen("Lana Del Ray",	 "Norman F***ing Rockwell!", 				 "lanadelray.png"	  ));
-		this.topSongs.add(new TopTen("The Highwaywomen", "The Highwaywomen",						 "thehighwaywomen.png"));
+		this.topSongs.add(new TopTen("Post Malone",		 "Hollywood's Bleeding", 					 "postmalonesong.png"	  ));
+		this.topSongs.add(new TopTen("Taylor Swift",	 "Lover",				 					 "taylorswiftsong.png"	  ));
+		this.topSongs.add(new TopTen("Melanie Martinez", "k-12",				 					 "melaniemartinezsong.png"));
+		this.topSongs.add(new TopTen("Young Thug",		 "So Much Fun",			 					 "youngthugsong.png"	  ));
+		this.topSongs.add(new TopTen("Lil Tecca",		 "We love you Tecca",	 					 "lilteccasong.png"		  ));
+		this.topSongs.add(new TopTen("Lizzo",			 "Cuz I love you",		 					 "lizzosong.png"		  ));
+		this.topSongs.add(new TopTen("Tool",			 "Fear Inoculum",		 					 "toolsong.png"			  ));
+		this.topSongs.add(new TopTen("Billie Eilish",	 "When We All Fall Asleep, Where do we Go?", "billieeilishsong.png"	  ));
+		this.topSongs.add(new TopTen("Lana Del Ray",	 "Norman F***ing Rockwell!", 				 "lanadelraysong.png"	  ));
+		this.topSongs.add(new TopTen("The Highwaywomen", "The Highwaywomen",						 "thehighwaywomensong.png"));
 		
 		return this.topSongs;
 	}
@@ -38,15 +38,15 @@ public class TopTenService {
 	{
 		this.topArtists = new ArrayList<TopTen>();
 		
-		this.topArtists.add(new TopTen("Post Malone",      "Beerbongs and Bentleys", "PostMalone.png"     ));
-		this.topArtists.add(new TopTen("Taylor Swift",     "Me",                     "taylorswift.png"    ));
-		this.topArtists.add(new TopTen("Billie Eilish",    "Ocean Eyes",             "billieeilish.png"   ));
-		this.topArtists.add(new TopTen("Lizzo",            "Truth Hurts",            "lizzo.png"          ));
-		this.topArtists.add(new TopTen("Khalid",           "Talk",                   "Khalid.png"         ));
-		this.topArtists.add(new TopTen("Tool",             "Schism",                 "Tool.png"           ));
-		this.topArtists.add(new TopTen("Ed Sheeran",       "Shape Of You",           "edsheeran.png"      ));
-		this.topArtists.add(new TopTen("Camila Cabello",   "Havana",                 "camilacabello.png"  ));
-		this.topArtists.add(new TopTen("Melanie Martinez", "Too Close",              "melaniemartinez.png"));
+		this.topArtists.add(new TopTen("Post Malone",      "Beerbongs and Bentleys", "PostMaloneartist.png"     ));
+		this.topArtists.add(new TopTen("Taylor Swift",     "Me",                     "taylorswiftartist.png"    ));
+		this.topArtists.add(new TopTen("Billie Eilish",    "Ocean Eyes",             "billieeilishartist.png"   ));
+		this.topArtists.add(new TopTen("Lizzo",            "Truth Hurts",            "lizzoartist.png"          ));
+		this.topArtists.add(new TopTen("Khalid",           "Talk",                   "Khalidartist.png"         ));
+		this.topArtists.add(new TopTen("Tool",             "Schism",                 "Toolartist.png"           ));
+		this.topArtists.add(new TopTen("Ed Sheeran",       "Shape Of You",           "edsheeranartist.png"      ));
+		this.topArtists.add(new TopTen("Camila Cabello",   "Havana",                 "camilacabelloartist.png"  ));
+		this.topArtists.add(new TopTen("Melanie Martinez", "Too Close",              "melaniemartinezartist.png"));
 		
 		return this.topArtists;
 	}
