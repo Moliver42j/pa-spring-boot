@@ -2,34 +2,45 @@ package uk.ac.belfastmet.TopTenMusic.domain;
 
 public class TopTen 
 {
-	private String artist;
+	private String artistName;
 	private String song;
 	private String image;
 	
 	
-	public TopTen(String artist, String song, String image) {
-		super();
-		this.artist = artist;
+	public TopTen(String artistName, String song, String image) 
+	{
+		this.artistName = artistName;
 		this.song = song;
 		this.image = image;
 	}
 	
-	public String getArtist() {
-		return artist;
+	public String getArtistName() 
+	{
+		return artistName;
 	}
-	public void setArtist(String artist) {
-		this.artist = artist;
+	
+	public void setArtist(String artist) 
+	{
+		this.artistName = artist;
 	}
-	public String getSong() {
+	
+	public String getSong() 
+	{
 		return song;
 	}
-	public void setSong(String song) {
+	
+	public void setSong(String song) 
+	{
 		this.song = song;
 	}
-	public String getImage() {
+	
+	public String getImage() 
+	{
 		return image;
 	}
-	public void setImage(String image) {
+	
+	public void setImage(String image) 
+	{
 		this.image = image;
 	}
 	

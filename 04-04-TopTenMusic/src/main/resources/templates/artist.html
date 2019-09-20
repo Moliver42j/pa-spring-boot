@@ -40,20 +40,22 @@
 
 <div class="container">
 
-<p>This site will contain information about Disney Dwarfs </p>
+<p>This site will contain information about Artists </p>
 <table class="table table-striped">
 	<thead>
 		<tr>
 		<th>name</th>
+		<th>song</th>
 		<th>picture</th>
 		</tr>
 	</thead>
 	
 	<tbody>
-		<!-- <tr th:each="dwarf: ${dwarfs}">
-			<td th:text="${dwarf.name}"></td>
-			<td><img src="../static/images/Happy.png" th:src="@{/images/} + ${dwarf.image}"></img> </td>
-		</tr> -->
+		<tr th:each="artist: ${topArtists}">
+			<td th:text="${artist.artistName}"></td>
+			<td th:text="${artist.song}"></td>
+			<td><img src="../static/images/postmalone.png" th:src="@{/images/} + ${artist.image}"></img> </td>
+		</tr>
 	</tbody>
 </table>
 </div>
