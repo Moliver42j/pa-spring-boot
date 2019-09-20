@@ -6,7 +6,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-
 import uk.ac.belfastmet.TopTenMusic.service.TopTenService;
 
 @Controller
@@ -26,13 +25,17 @@ public class TopTenController
 	@GetMapping("/song")
 	public String topTensongs(Model model)
 	{
+		log.info("song method");
+		TopTenService topTenService = new TopTenService();
+		model.addAttribute("topSongs",topTenService.getTopSongs());
+		
 		return "song";
 	}
 	
 	@GetMapping("/artist")
 	public String topTenArtists(Model model)
 	{
-		log.info("An info Message");
+		log.info("artist method");
 		TopTenService topTenService = new TopTenService();
 		model.addAttribute("topArtists",topTenService.getTopArtists());
 		

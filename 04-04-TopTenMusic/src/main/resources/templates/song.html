@@ -50,10 +50,11 @@
 	</thead>
 	
 	<tbody>
-		<!-- <tr th:each="dwarf: ${dwarfs}">
-			<td th:text="${dwarf.name}"></td>
-			<td><img src="../static/images/Happy.png" th:src="@{/images/} + ${dwarf.image}"></img> </td>
-		</tr> -->
+		<tr th:each="song: ${topSongs}">
+			<td th:text="${song.artistName}"></td>
+			<td th:text="${song.song}"></td>
+			<td><img src="../static/images/postmalone.png" th:src="@{/images/} + ${song.image}"></img> </td>
+		</tr>
 	</tbody>
 </table>
 </div>
