@@ -27,12 +27,31 @@ public class TodoController
 	{
 		log.info("inside homePage Method");
 		
-		model.addAttribute("pagetitle", "ToDotdotdsfsfa");
+		model.addAttribute("pagetitle", "To-Do");
 		
 		TodoService todoService = new TodoService();
 		model.addAttribute("todo", todoService.getTodo());
 		
 		log.info("leaving homePage Method");
 		return "index";
+	}
+	
+	@GetMapping("/completed")
+	public String completedPage(Model model)
+	{
+		log.info("inside completedPage method");
+		
+		model.addAttribute("pagetitle","Completed");
+		
+		TodoService todoService = new TodoService();
+		model.addAttribute("todo", todoService.getTodo());
+		
+		return "completed";
+	}
+	
+	@GetMapping("/login")
+	public String loginPage(Model model)
+	{
+		return "login";
 	}
 }

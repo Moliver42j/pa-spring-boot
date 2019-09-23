@@ -7,7 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class TodoApplication {
-
 	
 	static Logger log = LoggerFactory.getLogger(TodoApplication.class);
 
