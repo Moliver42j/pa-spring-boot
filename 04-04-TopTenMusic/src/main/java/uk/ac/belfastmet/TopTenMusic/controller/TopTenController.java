@@ -12,10 +12,15 @@ import uk.ac.belfastmet.TopTenMusic.service.TopTenService;
 @RequestMapping
 public class TopTenController 
 {
-	
 	Logger log = LoggerFactory.getLogger(TopTenController.class);
-
 	
+	/**
+	 * This method is getting the index for the application by catching
+	 * url that is entered into the search bar
+	 * 
+	 * @param model
+	 * @return an index html file
+	 */
 	@GetMapping("/index")
 	public String homePage(Model model)
 	{
@@ -24,6 +29,13 @@ public class TopTenController
 		return "index";
 	}
 	
+	/**
+	 * This method is getting the 'song' page for the application by catching
+	 * url that is entered into the search bar
+	 * 
+	 * @param model
+	 * @return song html file
+	 */
 	@GetMapping("/song")
 	public String topTensongs(Model model)
 	{
@@ -34,6 +46,13 @@ public class TopTenController
 		return "song";
 	}
 	
+	/**
+	 * This method is getting the 'artist' page for the application by catching
+	 * url that is entered into the search bar
+	 * 
+	 * @param model
+	 * @return artist html file
+	 */
 	@GetMapping("/artist")
 	public String topTenArtists(Model model)
 	{

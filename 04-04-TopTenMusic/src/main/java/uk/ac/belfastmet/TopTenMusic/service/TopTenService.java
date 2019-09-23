@@ -12,6 +12,11 @@ public class TopTenService {
 	private ArrayList<TopTen> topSongs;
 	private ArrayList<TopTen> topArtists;
 
+	
+	/**
+	 * This method stores the data for the topSongs instance of the topTen Class
+	 * @return an arraylist of song data 
+	 */
 	public ArrayList<TopTen> getTopSongs() {
 
 		this.topSongs = new ArrayList<TopTen>();
@@ -34,6 +39,10 @@ public class TopTenService {
 		return this.topSongs;
 	}
 
+	/**
+	 * This method stores the data for the topArtists instance of the topTen Class
+	 * @return an arraylist of artist data
+	 */
 	public ArrayList<TopTen> getTopArtists() {
 		this.topArtists = new ArrayList<TopTen>();
 
