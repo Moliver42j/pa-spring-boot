@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+
+    <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" />
+	
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+	<!-- Custom Styles  -->
+
+<title th:text="${pageTitle}">index</title>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link active" href="">To-Do List</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="">none</a>
+    </li>
+      <li class="nav-item">
+      <a class="nav-link" href="">none</a>
+    </li>
+  </ul>
+</nav>
+<div class="jumbotron text-center">
+
+<h1>To-Do List</h1>
+<h2></h2>
+<br />
+
+</div>
+
+
+<div class="container">
+
+<p>This is a To-Do List </p>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Status</th>
+			<th>Priority</th>
+			<th>Name</th>
+			<th>Description</th>
+			<th>Deadline</th>
+			<th>Date Created</th>
+			<th>Owner</th>
+		</tr>
+	</thead>
+	
+	<tbody>
+		<tr th:each="task: ${todo}">
+			<td th:text="${task.status}"></td>
+			<td th:text="${task.priority}"></td>
+			<td th:text="${task.name}"></td>
+			<td th:text="${task.description}"></td>
+			<td th:text="${task.deadline}"></td>
+			<td th:text="${task.dateCreated}"></td>
+			<td th:text="${task.owner}"></td>
+			
+		</tr>
+	</tbody>
+</table>
+</div>
+
+</body>
+</html>
