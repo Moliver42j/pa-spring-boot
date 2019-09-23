@@ -17,14 +17,18 @@ public class TodoService
 	
 	Logger log = LoggerFactory.getLogger(TodoService.class);
 
-	
+	/**
+	 * this method populates the 'todo' ArrayList
+	 * 
+	 * @return the todo ArrayList
+	 */
 	public ArrayList<Todo> getTodo()
 	{
 		log.info("Enter getTodo");
 		this.todo = new ArrayList<Todo>();
 		
 		//				  Todo(status, priority,name, description, deadline, dateCreated, owner)
-		this.todo.add(new Todo(true, "1","Matthew's task","a task",setDate(2019,10,04),setDate(2019,9,23),"Matthew"));
+		this.todo.add(new Todo(true, "1","Matthew's task","deliver award winning ted talk",setDate(2019,10,04),setDate(2019,9,23),"Matthew"));
 		this.todo.add(new Todo(false,"2","Josh's task","a task",setDate(2019,10,04),setDate(2019,9,23),"Josh"));
 		this.todo.add(new Todo(true, "3","Rose's task","a task",setDate(2019,10,04),setDate(2019,9,23),"Rose"));
 		this.todo.add(new Todo(true, "4","Hannah's task","a task",setDate(2019,10,04),setDate(2019,9,23),"Hannah"));
@@ -35,6 +39,13 @@ public class TodoService
 		return this.todo;
 	}
 	
+	/**
+	 * this method sets the date variable for the 'todo' ArrayList
+	 * @param year
+	 * @param month
+	 * @param day
+	 * @return date
+	 */
 	@SuppressWarnings("deprecation")
 	public Date setDate(int year, int month, int day)
 	{	

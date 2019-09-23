@@ -18,18 +18,20 @@
 <body>
 <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
   <ul class="navbar-nav">
-    <li class="nav-item">
-      <a class="nav-link active" href="/index">To-Do List</a>
+  
+  	<li class="nav-item">
+      <a class="nav-link" href="/login">login</a>
+    </li>
+    <li class="nav-item active">
+      <a class="nav-link" href="/index">To-Do List</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="/completed">Completed</a>
     </li>
-      <li class="nav-item">
-      <a class="nav-link" href="/login">login</a>
-    </li>
+    
   </ul>
 </nav>
-<div class="jumbotron text-center">
+<div class="jumbotron text-center" >
 
 <h1>To-Do List</h1>
 <h2></h2>
@@ -51,18 +53,33 @@
 			<th>Deadline</th>
 			<th>Date Created</th>
 			<th>Owner</th>
+			<th></th>
+			<th>Options</th>
+			<th></th>
 		</tr>
 	</thead>
 	
 	<tbody>
 		<tr th:each="task: ${todo}">
-			<td><input type="checkbox" name="active" th:checked="${task.status}" /></td>
+			<td><input type="checkbox"  th:checked="${task.status}" /></td>
 			<td th:text="${task.priority}"></td>
 			<td th:text="${task.name}"></td>
 			<td th:text="${task.description}"></td>
 			<td th:text="${task.deadline}"></td>
 			<td th:text="${task.dateCreated}"></td>
 			<td th:text="${task.owner}"></td>
+			<td>
+			<button class="btn btn-primary" type="submit" 
+					data-toggle="tooltip" data-placement="left" 
+					title="View This task">View</button>
+			</td>
+			<td><button class="btn btn-primary" type="submit" 
+					data-toggle="tooltip" data-placement="left" 
+					title="Edit This task">Edit</button></td>
+			<td><button class="btn btn-primary" type="submit" 
+					data-toggle="tooltip" data-placement="left" 
+					title="Delete This task">Delete</button></td>
+			
 			
 		</tr>
 	</tbody>

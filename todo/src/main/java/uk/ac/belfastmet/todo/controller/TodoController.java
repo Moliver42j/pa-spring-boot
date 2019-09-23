@@ -36,6 +36,12 @@ public class TodoController
 		return "index";
 	}
 	
+	/**
+	 * this method directs to the completed page which filters the tasks by completion status
+	 * 
+	 * @param model
+	 * @return the 'completed' html page
+	 */
 	@GetMapping("/completed")
 	public String completedPage(Model model)
 	{
@@ -48,6 +54,7 @@ public class TodoController
 		
 		return "completed";
 	}
+	
 	
 	@GetMapping("/login")
 	public String loginPage(Model model)
