@@ -61,7 +61,7 @@
 	
 	<tbody>
 	
-		<tr th:each="task: ${todo}" th:if="${task.status}">
+		<tr th:each="task: ${todoList}" th:if="${task.status}">
 		
 			<td><input type="checkbox" th:checked="${task.status}" /></td>
 			<td th:text="${task.priority}"></td>
@@ -70,18 +70,15 @@
 			<td th:text="${task.deadline}"></td>
 			<td th:text="${task.dateCreated}"></td>
 			<td th:text="${task.owner}"></td>
-			<td>
-			<button class="btn btn-primary" type="submit" data-toggle="tooltip" data-placement="left" 
-					title="View This task">View</button>
-			</td>
 			
+			<td><button class="btn btn-primary" type="submit" data-toggle="tooltip" data-placement="left" 
+						title="View This task">View</button></td>
 			<td><button class="btn btn-primary" type="submit" 
-					data-toggle="tooltip" data-placement="left" 
-					title="Edit This task">Edit</button></td>
-					
+						data-toggle="tooltip" data-placement="left" 
+						title="Edit This task">Edit</button></td>			
 			<td><button class="btn btn-primary" type="submit" 
-					data-toggle="tooltip" data-placement="left" 
-					title="Delete This task">Delete</button></td>
+						data-toggle="tooltip" data-placement="left" 
+						title="Delete This task">Delete</button></td>
 			
 		</tr>
 		

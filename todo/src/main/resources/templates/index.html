@@ -60,7 +60,7 @@
 	</thead>
 	
 	<tbody>
-		<tr th:each="task: ${todo}">
+		<tr th:each="task: ${todoList}">
 			<td><input type="checkbox"  th:checked="${task.status}" /></td>
 			<td th:text="${task.priority}"></td>
 			<td th:text="${task.name}"></td>

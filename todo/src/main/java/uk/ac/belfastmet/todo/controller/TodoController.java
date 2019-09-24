@@ -30,7 +30,7 @@ public class TodoController
 		model.addAttribute("pagetitle", "To-Do");
 		
 		TodoService todoService = new TodoService();
-		model.addAttribute("todo", todoService.getTodo());
+		model.addAttribute("todoList", todoService.getTodo());
 		
 		log.info("leaving homePage Method");
 		return "index";
@@ -50,7 +50,7 @@ public class TodoController
 		model.addAttribute("pagetitle","Completed");
 		
 		TodoService todoService = new TodoService();
-		model.addAttribute("todo", todoService.getTodo());
+		model.addAttribute("todoList", todoService.getTodo());
 		
 		return "completed";
 	}
