@@ -2,9 +2,14 @@ package uk.ac.belfastmet.todo.service;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Iterator;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jca.cci.core.InteractionCallback;
 import org.springframework.stereotype.Service;
+
 
 import uk.ac.belfastmet.todo.domain.Todo;
 
@@ -16,6 +21,10 @@ import uk.ac.belfastmet.todo.domain.Todo;
 @Service
 public class TodoService 
 {
+	
+	@Autowired
+	private uk.ac.belfastmet.todo.repositories.TodoRepository todoRepository;
+
 	
 	private ArrayList<Todo> todo;
 	
@@ -30,8 +39,9 @@ public class TodoService
 	public ArrayList<Todo> getTodo()
 	{
 		log.info("Enter getTodo");
-		this.todo = new ArrayList<Todo>();
+		//this.todo = new ArrayList<Todo>();
 		
+		/*
 		//				  Todo(status, priority,name, description, deadline, dateCreated, owner)
 		this.todo.add(new Todo(true, "1","Matthew's task","deliver award winning ted talk",setDate(2019,10,04),setDate(2019,9,23),"Matthew"));
 		this.todo.add(new Todo(false,"2","Josh's task","a task",setDate(2019,10,04),setDate(2019,9,23),"Josh"));
@@ -39,8 +49,16 @@ public class TodoService
 		this.todo.add(new Todo(true, "4","Hannah's task","a task",setDate(2019,10,04),setDate(2019,9,23),"Hannah"));
 		this.todo.add(new Todo(false,"5","Paul's task","a task",setDate(2019,10,04),setDate(2019,9,23),"Paul"));
 		this.todo.add(new Todo(true, "6","Jack's task","a task",setDate(2019,10,04),setDate(2019,9,23),"Jack"));
+		*/
 		
-		//really like this use of the logger DR
+		Iterable< Todo > todo = todoRepository.findAll();
+		Iterator< Todo > iterator = todo.iterator();
+		
+		while(iterator.hasNext())
+		{
+			log.info("{}", iterator.next().toString());
+		}
+		
 		log.info("leaving getTodo");
 		return this.todo;
 	}
@@ -58,5 +76,15 @@ public class TodoService
 		Date date = new Date(year, month, day);
 		
 		return date;
+	}
+	
+	
+	/**
+	 * gets the number of items in the todo object
+	 */
+	public void getNumberOfTasks()
+	{
+		log.info("# of tasks: {}", todoRepository.count());
+		log.info("other: {}", todoRepository.findAll());
 	}
 }

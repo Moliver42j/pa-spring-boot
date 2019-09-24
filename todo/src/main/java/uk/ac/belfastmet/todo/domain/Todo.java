@@ -2,6 +2,13 @@ package uk.ac.belfastmet.todo.domain;
 
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -10,22 +17,23 @@ import org.slf4j.LoggerFactory;
  * @author oli19171901
  *
  */
+@Entity
+@Table(name = "task")
 public class Todo 
 {
+	private long    id;
 	private Boolean status;
-	private String priority;
-	private String name;
-	private String description;
-	private Date deadline;
-	private Date dateCreated;
-	private String owner;
-	
+	private String  priority;
+	private String  name;
+	private String  description;
+	private Date    deadline;
+	private Date    dateCreated;
+	private String  owner;
 	
 	
 	Logger log = LoggerFactory.getLogger(Todo.class);
 
 	
-	//constructor
 	
 	/**
 	 * default constructor 
@@ -62,10 +70,23 @@ public class Todo
 		log.info("Leave Todo constructor");
 	}
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	public long getId()
+	{
+		return this.id;
+	}
+	
+	public void setId(long id)
+	{
+		this.id = id;
+	}
+	
 	//getters and setters
 	
 	// add java doc comments for all, ps in the source/ generate getters and setters window you can get it to auto add comments 
 	
+	@Column(name = "status")
 	public Boolean getStatus() 
 	{
 		return status;
@@ -76,6 +97,7 @@ public class Todo
 		this.status = status;
 	}
 	
+	@Column(name = "priority")
 	public String getPriority() 
 	{
 		return priority;
@@ -86,6 +108,7 @@ public class Todo
 		this.priority = priority;
 	}
 	
+	@Column(name = "name")
 	public String getName() 
 	{
 		return name;
@@ -96,6 +119,7 @@ public class Todo
 		this.name = name;
 	}
 	
+	@Column(name = "description")
 	public String getDescription() 
 	{
 		return description;
@@ -106,6 +130,7 @@ public class Todo
 		this.description = description;
 	}
 	
+	@Column(name = "deadline")
 	public Date getDeadline() 
 	{
 		return deadline;
@@ -116,6 +141,7 @@ public class Todo
 		this.deadline = deadline;
 	}
 	
+	@Column(name = "datecreated")
 	public Date getDateCreated() 
 	{
 		return dateCreated;
@@ -126,6 +152,7 @@ public class Todo
 		this.dateCreated = dateCreated;
 	}
 	
+	@Column(name = "user")
 	public String getOwner() 
 	{
 		return owner;
@@ -135,6 +162,7 @@ public class Todo
 	{
 		this.owner = owner;
 	}
+	
 	
 	
 }

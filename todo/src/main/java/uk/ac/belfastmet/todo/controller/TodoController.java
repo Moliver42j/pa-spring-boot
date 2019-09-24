@@ -2,6 +2,7 @@ package uk.ac.belfastmet.todo.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,6 +20,9 @@ import uk.ac.belfastmet.todo.service.TodoService;
 public class TodoController 
 {
 	
+	@Autowired
+	private TodoService todoService;
+	
 	Logger log = LoggerFactory.getLogger(TodoController.class);
 	
 	/**
@@ -32,9 +36,9 @@ public class TodoController
 		log.info("inside homePage Method");
 		
 		model.addAttribute("pagetitle", "To-Do");
-		
-		TodoService todoService = new TodoService();
 		model.addAttribute("todoList", todoService.getTodo());
+		
+		todoService.getNumberOfTasks();
 		
 		log.info("leaving homePage Method");
 		return "index";
@@ -53,7 +57,6 @@ public class TodoController
 		
 		model.addAttribute("pagetitle","Completed");
 		
-		TodoService todoService = new TodoService();
 		model.addAttribute("todoList", todoService.getTodo());
 		
 		return "completed";
