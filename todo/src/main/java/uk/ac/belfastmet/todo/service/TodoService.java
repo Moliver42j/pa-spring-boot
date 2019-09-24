@@ -8,6 +8,11 @@ import org.springframework.stereotype.Service;
 
 import uk.ac.belfastmet.todo.domain.Todo;
 
+/**
+ * 
+ * @author oli19171901
+ *
+ */
 @Service
 public class TodoService 
 {
@@ -35,6 +40,7 @@ public class TodoService
 		this.todo.add(new Todo(false,"5","Paul's task","a task",setDate(2019,10,04),setDate(2019,9,23),"Paul"));
 		this.todo.add(new Todo(true, "6","Jack's task","a task",setDate(2019,10,04),setDate(2019,9,23),"Jack"));
 		
+		//really like this use of the logger DR
 		log.info("leaving getTodo");
 		return this.todo;
 	}

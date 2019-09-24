@@ -9,7 +9,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import uk.ac.belfastmet.todo.service.TodoService;
 
-
+/**
+ * 
+ * @author oli19171901 DR
+ *
+ */
 @Controller
 @RequestMapping
 public class TodoController 
@@ -55,7 +59,11 @@ public class TodoController
 		return "completed";
 	}
 	
-	
+	/**
+	 * method to return the login page 
+	 * @param model
+	 * @return the login html page
+	 */
 	@GetMapping("/login")
 	public String loginPage(Model model)
 	{

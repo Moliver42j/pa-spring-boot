@@ -5,6 +5,11 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * 
+ * @author oli19171901
+ *
+ */
 @SpringBootApplication
 public class TodoApplication {
 	

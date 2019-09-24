@@ -5,6 +5,11 @@ import java.util.Date;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * 
+ * @author oli19171901
+ *
+ */
 public class Todo 
 {
 	private Boolean status;
@@ -21,6 +26,25 @@ public class Todo
 
 	
 	//constructor
+	
+	/**
+	 * default constructor 
+	 */
+	public Todo() 
+	{
+		
+	}
+	
+	/**
+	 * constructor with all args
+	 * @param status
+	 * @param priority
+	 * @param name
+	 * @param description
+	 * @param deadline
+	 * @param dateCreated
+	 * @param owner
+	 */
 	public Todo(Boolean status, String priority, String name, 
 				String description, Date deadline, Date dateCreated,
 				String owner) 
@@ -39,6 +63,9 @@ public class Todo
 	}
 	
 	//getters and setters
+	
+	// add java doc comments for all, ps in the source/ generate getters and setters window you can get it to auto add comments 
+	
 	public Boolean getStatus() 
 	{
 		return status;
