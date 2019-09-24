@@ -36,7 +36,7 @@ public class TodoService
 	 * 
 	 * @return the todo ArrayList
 	 */
-	public ArrayList<Todo> getTodo()
+	public Iterable<Todo> getTodo()
 	{
 		log.info("Enter getTodo");
 		//this.todo = new ArrayList<Todo>();
@@ -57,10 +57,12 @@ public class TodoService
 		while(iterator.hasNext())
 		{
 			log.info("{}", iterator.next().toString());
+			log.info("Thank you, next");
+		
 		}
 		
 		log.info("leaving getTodo");
-		return this.todo;
+		return todo;
 	}
 	
 	/**

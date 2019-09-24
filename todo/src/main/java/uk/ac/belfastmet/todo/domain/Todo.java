@@ -163,6 +163,13 @@ public class Todo
 		this.owner = owner;
 	}
 	
-	
+	@Override
+	public String toString()
+	{
+		return "Status: " + status + " priority: " + priority + " name: " + name + "description: " + description
+				+ "deadline: " + deadline + " datecreated: " + dateCreated + " owner: " + owner ;
+		
+		
+	}
 	
 }
