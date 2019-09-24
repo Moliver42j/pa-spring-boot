@@ -65,7 +65,6 @@
 			</thead>
 
 			<tbody>
-
 				<tr th:each="task: ${todoList}" th:if="${task.status}">
 
 					<td><input type="checkbox" th:checked="${task.status}" /></td>
@@ -87,11 +86,9 @@
 							title="Delete This task">Delete</button></td>
 
 				</tr>
-
 			</tbody>
 		</table>
 <!-- Table END -->
 	</div>
-
 </body>
 </html>
