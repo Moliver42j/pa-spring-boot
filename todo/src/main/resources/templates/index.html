@@ -7,21 +7,19 @@
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- jQuery library -->
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!-- Latest compiled JavaScript -->
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
 <!-- Custom Styles  -->
 
 <title th:text="${pageTitle}">index</title>
-<!-- <style>
-@media
 
-
-
-</style> -->
+<script type="text/javascript">
+	$('#addModal').on('shown.bs.modal', function () {
+	  $('#modalBtn').trigger('focus')
+	})
+</script>
 </head>
 
 <body>
@@ -98,11 +96,82 @@
 		</table>
 <!-- Table END -->
 	</div>
-	<button id="addBtn" class="btn btn-primary"  
-			style ="position: fixed;bottom: 0px; right: 0px; margin-right:10%; margin-bottom:5%; border-radius: 25px; height: 10%; width: 5%;"
-    						type="submit"
-							data-toggle="tooltip" data-placement="left"
-							title="Add new task">
-							Add</button>
+<!-- Add button -->
+	<button id="addBtn" class="btn btn-success"  
+			style ="position: fixed;bottom: 0px; right: 0px; 
+					margin-right:5%; margin-bottom:5%; 
+					border-radius: 100%; height: 100px; width: 100px;"
+    		type="submit"
+			title="Add new task"
+			data-toggle="modal" data-target="#addModal">
+			Add</button>
+<!-- Add button END -->
+	
+<!-- Modal -->	
+	<div class="modal fade" id="addModal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class ="modal-header">
+					New task
+				</div>
+				<div class ="modal-body">
+					<!-- Login form -->
+							<form>
+								<div class="form-group">
+									<label>Status</label>
+									<div>
+										<label class="radio-inline"><input type="radio" name="optradio">Complete  </label>
+										<label class="radio-inline"><input type="radio" name="optradio" checked>Not Complete  </label>
+									</div>
+								</div>
+								<div class="form-group">
+									<label>Priority</label> 
+									<div>
+										<label class="radio-inline"><input type="radio" name="optradio">Highest  </label>
+										<label class="radio-inline"><input type="radio" name="optradio">High  </label>
+										<label class="radio-inline"><input type="radio" name="optradio">Medium  </label>
+										<label class="radio-inline"><input type="radio" name="optradio">Low  </label>
+										<label class="radio-inline"><input type="radio" name="optradio">Lowest  </label>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="comment">Description:</label>
+  									<textarea class="form-control" rows="5" id="comment"></textarea>
+								</div>
+								<div class="form-group">
+									<label for="sel1">Deadline</label>
+									 <select class="form-control" id="sel1">
+									   <option>1</option>
+									   <option>2</option>
+									   <option>3</option>
+									   <option>4</option>
+									 </select>
+								</div>
+								<div class="form-group">
+									<label for="sel1">Date Created:</label>
+									 <select class="form-control" id="sel1" >
+									   <option>1</option>
+									   <option>2</option>
+									   <option>3</option>
+									   <option>4</option>
+									 </select>
+								</div>
+								<div class="form-group">
+									<label>Created by:</label> <input type="email"
+									class="form-control" placeholder="Created by...">
+								</div>
+								
+							</form>
+					<!-- Login form END -->
+				</div>
+				<div class ="modal-footer">
+					<button type="submit" class="btn btn-primary">Save and close</button>
+					<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- Modal END -->	
+							
 </body>
 </html>
