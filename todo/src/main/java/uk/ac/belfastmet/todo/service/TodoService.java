@@ -58,7 +58,6 @@ public class TodoService
 		{
 			log.info("{}", iterator.next().toString());
 			log.info("Thank you, next");
-		
 		}
 		
 		log.info("leaving getTodo");

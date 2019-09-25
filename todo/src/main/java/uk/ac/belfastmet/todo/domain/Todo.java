@@ -83,9 +83,7 @@ public class Todo
 	}
 	
 	//getters and setters
-	
-	// add java doc comments for all, ps in the source/ generate getters and setters window you can get it to auto add comments 
-	
+		
 	@Column(name = "status")
 	public Boolean getStatus() 
 	{
@@ -167,7 +165,7 @@ public class Todo
 	public String toString()
 	{
 		return "Status: " + status + " priority: " + priority + " name: " + name + "description: " + description
-				+ "deadline: " + deadline + " datecreated: " + dateCreated + " owner: " + owner ;
+				+ " deadline: " + deadline + " datecreated: " + dateCreated + " owner: " + owner ;
 		
 		
 	}

@@ -15,7 +15,8 @@ public class TodoApplication {
 	
 	static Logger log = LoggerFactory.getLogger(TodoApplication.class);
 
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
 		log.info("Application start, in TodoApplication.java");
 		SpringApplication.run(TodoApplication.class, args);
 	}

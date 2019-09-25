@@ -12,7 +12,7 @@ import uk.ac.belfastmet.todo.service.TodoService;
 
 /**
  * 
- * @author oli19171901 DR
+ * @author oli19171901
  *
  */
 @Controller
