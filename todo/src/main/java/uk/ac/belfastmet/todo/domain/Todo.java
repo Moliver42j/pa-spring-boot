@@ -165,9 +165,7 @@ public class Todo
 	public String toString()
 	{
 		return "Status: " + status + " priority: " + priority + " name: " + name + "description: " + description
-				+ " deadline: " + deadline + " datecreated: " + dateCreated + " owner: " + owner ;
-		
-		
+				+ " deadline: " + deadline + " datecreated: " + dateCreated + " owner: " + owner ;		
 	}
 	
 }

@@ -1,6 +1,5 @@
 package uk.ac.belfastmet.todo.service;
 
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.Iterator;
 
@@ -26,7 +25,7 @@ public class TodoService
 	private uk.ac.belfastmet.todo.repositories.TodoRepository todoRepository;
 
 	
-	private ArrayList<Todo> todo;
+	
 	
 	
 	Logger log = LoggerFactory.getLogger(TodoService.class);
