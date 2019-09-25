@@ -1,5 +1,5 @@
 package uk.ac.belfastmet.todo.service;
-
+ 	
 import java.util.Date;
 import java.util.Iterator;
 
@@ -24,10 +24,6 @@ public class TodoService
 	@Autowired
 	private uk.ac.belfastmet.todo.repositories.TodoRepository todoRepository;
 
-	
-	
-	
-	
 	Logger log = LoggerFactory.getLogger(TodoService.class);
 
 	/**
@@ -38,25 +34,14 @@ public class TodoService
 	public Iterable<Todo> getTodo()
 	{
 		log.info("Enter getTodo");
-		//this.todo = new ArrayList<Todo>();
-		
-		/*
-		//				  Todo(status, priority,name, description, deadline, dateCreated, owner)
-		this.todo.add(new Todo(true, "1","Matthew's task","deliver award winning ted talk",setDate(2019,10,04),setDate(2019,9,23),"Matthew"));
-		this.todo.add(new Todo(false,"2","Josh's task","a task",setDate(2019,10,04),setDate(2019,9,23),"Josh"));
-		this.todo.add(new Todo(true, "3","Rose's task","a task",setDate(2019,10,04),setDate(2019,9,23),"Rose"));
-		this.todo.add(new Todo(true, "4","Hannah's task","a task",setDate(2019,10,04),setDate(2019,9,23),"Hannah"));
-		this.todo.add(new Todo(false,"5","Paul's task","a task",setDate(2019,10,04),setDate(2019,9,23),"Paul"));
-		this.todo.add(new Todo(true, "6","Jack's task","a task",setDate(2019,10,04),setDate(2019,9,23),"Jack"));
-		*/
-		
+				
 		Iterable< Todo > todo = todoRepository.findAll();
 		Iterator< Todo > iterator = todo.iterator();
 		
 		while(iterator.hasNext())
 		{
 			log.info("{}", iterator.next().toString());
-			log.info("Thank you, next");
+			log.info("Thank you, Next");
 		}
 		
 		log.info("leaving getTodo");
@@ -78,6 +63,21 @@ public class TodoService
 		return date;
 	}
 	
+//	public ArrayList<Todo> getArtificiaData()
+//	{
+//		this.todo = new ArrayList<Todo>();
+//		
+//				
+//		//				  Todo(status, priority,name, description, deadline, dateCreated, owner)
+//		this.todo.add(new Todo(true, "1","Matthew's task","deliver award winning ted talk",setDate(2019,10,04),setDate(2019,9,23),"Matthew"));
+//		this.todo.add(new Todo(false,"2","Josh's task","a task",setDate(2019,10,04),setDate(2019,9,23),"Josh"));
+//		this.todo.add(new Todo(true, "3","Rose's task","a task",setDate(2019,10,04),setDate(2019,9,23),"Rose"));
+//		this.todo.add(new Todo(true, "4","Hannah's task","a task",setDate(2019,10,04),setDate(2019,9,23),"Hannah"));
+//		this.todo.add(new Todo(false,"5","Paul's task","a task",setDate(2019,10,04),setDate(2019,9,23),"Paul"));
+//		this.todo.add(new Todo(true, "6","Jack's task","a task",setDate(2019,10,04),setDate(2019,9,23),"Jack"));
+//			
+//		return this.todo;
+//	}
 	
 	/**
 	 * gets the number of items in the todo object

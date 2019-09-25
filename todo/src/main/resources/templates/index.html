@@ -5,7 +5,7 @@
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" />
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- jQuery library -->
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -16,6 +16,12 @@
 <!-- Custom Styles  -->
 
 <title th:text="${pageTitle}">index</title>
+<!-- <style>
+@media
+
+
+
+</style> -->
 </head>
 
 <body>
@@ -59,9 +65,9 @@
 					<th>Deadline</th>
 					<th>Date Created</th>
 					<th>Owner</th>
-					<th></th>
+					
 					<th>Options</th>
-					<th></th>
+					
 				</tr>
 			</thead>
 
@@ -75,21 +81,28 @@
 					<td th:text="${task.dateCreated}"></td>
 					<td th:text="${task.owner}"></td>
 					<td>
-						<button class="btn btn-primary" type="submit"
-							data-toggle="tooltip" data-placement="left"
-							title="View This task">View</button>
+						<div class="btn-group" role="group">
+							<button class="btn btn-primary" type="submit"
+									data-toggle="tooltip" data-placement="left"
+									title="View This task">View</button>
+							<button class="btn btn-primary" type="submit"
+									data-toggle="tooltip" data-placement="left"
+									title="Edit This task">Edit</button>
+							<button class="btn btn-primary" type="submit"
+									data-toggle="tooltip" data-placement="left"
+									title="Delete This task">Delete</button>
+						</div>
 					</td>
-					<td><button class="btn btn-primary" type="submit"
-							data-toggle="tooltip" data-placement="left"
-							title="Edit This task">Edit</button></td>
-					<td><button class="btn btn-primary" type="submit"
-							data-toggle="tooltip" data-placement="left"
-							title="Delete This task">Delete</button></td>
 				</tr>
 			</tbody>
 		</table>
 <!-- Table END -->
 	</div>
-
+	<button id="addBtn" class="btn btn-primary"  
+			style ="position: fixed;bottom: 0px; right: 0px; margin-right:10%; margin-bottom:5%; border-radius: 25px; height: 10%; width: 5%;"
+    						type="submit"
+							data-toggle="tooltip" data-placement="left"
+							title="Add new task">
+							Add</button>
 </body>
 </html>
